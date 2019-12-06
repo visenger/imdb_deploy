@@ -2,11 +2,14 @@ from keras.datasets import imdb
 import numpy as np
 import keras
 from nltk import word_tokenize
-import tensorflow as tf
+
 from keras.backend.tensorflow_backend import set_session
 from keras.preprocessing import sequence
 import nltk
 nltk.download('punkt')
+
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 
 config = tf.ConfigProto()
